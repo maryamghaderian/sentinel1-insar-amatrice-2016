@@ -1,0 +1,48 @@
+﻿category,parameter,value,unit,source_document,notes
+Project,project_title,Sentinel-1 InSAR Earthquake Deformation Mapping — Amatrice 2016,,README.md,Repository project title
+Project,author,Maryam Ghaderian,,README.md,Project author
+Project,study_area,"Amatrice–Accumoli, Central Italy",,docs/methodology.md,Primary analysis area
+Event,earthquake_event_date,8/24/2016,ISO 8601 date,docs/methodology.md,Amatrice earthquake date
+Event,analysis_type,Coseismic Line-of-Sight displacement mapping,,docs/methodology.md,Single interferometric-pair InSAR analysis
+Acquisition,platform,Sentinel-1A,,docs/methodology.md,Used for both acquisitions
+Acquisition,product_type,IW SLC,,docs/methodology.md,Interferometric Wide Swath Single Look Complex
+Acquisition,pre_event_acquisition_date,8/15/2016,ISO 8601 date,docs/methodology.md,Pre-event acquisition
+Acquisition,post_event_acquisition_date,8/27/2016,ISO 8601 date,docs/methodology.md,Post-event acquisition
+Acquisition,temporal_baseline,12,days,docs/methodology.md,Time interval between acquisitions
+Acquisition,relative_orbit_track,117,,docs/methodology.md,Same relative orbit for both acquisitions
+Acquisition,pre_event_orbit_number,12614,,docs/methodology.md,Orbit number reported in project documentation
+Acquisition,post_event_orbit_number,12789,,docs/methodology.md,Orbit number reported in project documentation
+Acquisition,polarization,VV,,docs/methodology.md,Selected SAR polarization
+Acquisition,subswath,IW3,,docs/methodology.md,Selected Sentinel-1 TOPS subswath
+Auxiliary data,dem,Copernicus DEM GLO-30,,docs/methodology.md,Used for radar-geometry operations and terrain correction
+Auxiliary data,validation_database,DISS 3.3.1,,docs/validation.md,Independent structural reference
+Auxiliary data,validation_source_id,ITCS128,,docs/validation.md,Accumoli–Amatrice Composite Seismogenic Source
+Processing,coregistration,Back-Geocoding + Enhanced Spectral Diversity (ESD),,docs/methodology.md,Sentinel-1 TOPS coregistration strategy
+Processing,coherence_range_window,10,pixels,docs/methodology.md,Interferometric coherence estimation
+Processing,coherence_azimuth_window,2,pixels,docs/methodology.md,Interferometric coherence estimation
+Processing,goldstein_adaptive_filter_exponent,1,,docs/methodology.md,Goldstein phase-filter parameter
+Processing,goldstein_fft_size,64,,docs/methodology.md,Goldstein phase-filter parameter
+Processing,goldstein_window_size,3,,docs/methodology.md,Goldstein phase-filter parameter
+Processing,phase_unwrapping_software,SNAPHU 2.0.4,,docs/methodology.md,External phase unwrapping
+Processing,evaluated_coherence_thresholds,0.30; 0.40,coherence,docs/methodology.md,Thresholds assessed during quality control
+Processing,final_coherence_threshold,0.4,coherence,docs/methodology.md,Threshold used for final product
+Processing,stable_reference_offset,0.0112,m,docs/methodology.md,Mean reference-area displacement removed from masked displacement
+Output,measurement,Relative Line-of-Sight displacement,m,docs/methodology.md,Not pure vertical or 3-D displacement
+Output,crs_name,WGS 84 / UTM Zone 33N,,README.md,Projected coordinate reference system
+Output,epsg,32633,,README.md,EPSG identifier
+Output,pixel_spacing,13.88912,m,docs/methodology.md,Terrain-corrected raster pixel spacing
+Output,raster_width,3009,pixels,docs/methodology.md,Final raster width
+Output,raster_height,2852,pixels,docs/methodology.md,Final raster height
+Output,data_type,Float32,,docs/methodology.md,Final GeoTIFF data type
+Output,nodata_value,-9999,,docs/methodology.md,Final GeoTIFF NoData value
+Output,final_raster_filename,Amatrice_LOS_Displacement_20160815_20160827_coh04_ref_UTM33N_singleband.tif,,docs/methodology.md,Documented final single-band GeoTIFF name
+Visualization,display_minimum,-0.18,m,README.md,Cartographic display minimum
+Visualization,display_neutral,0,m,README.md,Approximate zero LOS displacement
+Visualization,display_maximum,0.06,m,README.md,Cartographic display maximum
+QA/QC,final_raster_valid_pixels,3033433,pixels,docs/methodology.md,Full-raster valid pixel count
+QA/QC,final_raster_minimum,-0.228492,m,docs/methodology.md,Full-raster statistic
+QA/QC,final_raster_maximum,0.064816,m,docs/methodology.md,Full-raster statistic
+QA/QC,final_raster_mean,-0.041798,m,docs/methodology.md,Full-raster statistic
+QA/QC,final_raster_standard_deviation,0.047592,m,docs/methodology.md,Full-raster statistic
+Validation,validation_type,Qualitative structural and geospatial consistency assessment,,docs/validation.md,Not a direct quantitative displacement accuracy assessment
+Validation,validation_interpretation,Spatial consistency with DISS ITCS128 and the mainshock epicentral area,,docs/validation.md,Conservative interpretation used in the repository

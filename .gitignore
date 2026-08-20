@@ -1,0 +1,91 @@
+# ============================================================
+# Sentinel-1 InSAR Amatrice 2016 — Git ignore rules
+# Keep the repository lightweight, reproducible, and portfolio-ready.
+# ============================================================
+
+# --- Raw Sentinel-1 / Copernicus downloads ---
+*.SAFE
+*.SAFE/
+*.zip
+
+# --- Large geospatial rasters and binary data ---
+*.tif
+*.tiff
+*.img
+*.hdr
+*.nc
+*.h5
+*.hdf5
+*.vrt
+
+# --- ESA SNAP products and intermediate processing outputs ---
+*.dim
+*.data/
+*.data
+*.raw
+*.dat
+
+# --- SNAPHU runtime / intermediate files ---
+*.snaphu.img
+*.snaphu.hdr
+snaphu.conf
+*.log
+
+# --- Keep repository data folders lightweight ---
+data/input/*
+!data/input/.gitkeep
+
+data/derived/*
+!data/derived/.gitkeep
+
+# --- Common local project/output directories ---
+01_raw_data/
+02_snap_processing/
+03_snaphu/
+04_output/
+output/
+outputs/
+temp/
+tmp/
+scratch/
+
+# --- QGIS temporary / auxiliary files ---
+*.qgz~
+*.qgd
+*.aux.xml
+*.ovr
+*.xml~
+
+# --- Python cache and virtual environments ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.env/
+.ipynb_checkpoints/
+
+# --- IDE/editor settings ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Windows ---
+Thumbs.db
+Desktop.ini
+
+# --- macOS ---
+.DS_Store
+
+# --- Generic temporary and backup files ---
+*.tmp
+*.temp
+*.bak
+*.old
+~$*
+
+# NOTE:
+# PNG/JPG figures, Markdown documentation, scripts, and small metadata files
+# are intentionally NOT ignored because they belong in the public repository.
